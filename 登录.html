@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<!--解决ios下数值变色-->
+		<meta name = "format-detection" content="telephone = no" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<title></title>
+		<style type="text/css">
+		    input::-webkit-input-placeholder {color: #c0c0c0 !important;}
+			input[type='text']:focus,input[type='password']:focus{box-shadow:none;}
+			.shop{padding-bottom: 0;}
+			.logIn_top{padding:0 3%;
+			 background: -webkit-linear-gradient(left,#fe474c,#fe5d26); 
+			 background: -o-linear-gradient(right,#fe474c,#fe5d26); 
+			 background: -moz-linear-gradient(right, #fe474c,#fe5d26); 
+			 background: linear-gradient(to right,#fe474c,#fe5d26); 
+			}
+			.logIn_top .titile{height:45px;line-height:45px;color: #fff;overflow: hidden;}
+			.logIn_top .titile a{color: #fff;}
+			.logIn_top .titile a.a1{float: left;font-size:1.6rem;}
+			.logIn_top .titile a.a2{float: right;}
+			.logIn_top .text{text-align: center;padding:6% 0;}
+			.logIn_top .text h3{font-size:2.5rem;color: #fff;line-height:90%;font-weight: bold;}
+			.logIn_top .text small{display: block;font-size: 1.0rem;font-weight: normal;}
+			.logIn_menu{padding: 0 3%;}
+			.logIn_menu a{display: inline-block;width: 50%;font-size:1.0rem;color: #959595;text-align: center;padding: 3% 0;}
+			.logIn_menu a.active{color: #e84365;border-bottom:2px solid #e84365;}
+			.logIn_content{padding:0 3%;}
+			.logIn_content p{position: relative;}
+			.logIn_content p i.i1 img{position: absolute;top: 50%;right:2px;width:25px;margin-top:-6px;}
+			.logIn_content p i.i2 img{position: absolute;top: 50%;left:2px;width:25px;margin-top:-12px;}
+			.logIn_content input[type=text],.logIn_content input[type=password]{padding:4% 0;border: none;border-bottom: 1px solid #e4e4e4;color: #c0c0c0}
+			.logIn_content input[type=submit]{height:47px;line-height:47px;background: #dbdbdb;color: #fff;width: 100%;border: none;font-size: 1.1rem;letter-spacing:5px;margin-top:7%;border-radius: 3px;}
+			.logIn_content .taob input[type=text],.logIn_content .taob input[type=password]{padding-left:40px;}
+			.forgotPassword{padding:2% 0 5%;}
+			.forgotPassword a{text-align: right;color: #9f9f9f;display: block;}
+			.other_land h3{text-align: center;color: #9c9c9c;padding-bottom: 6%;}
+			.other_land ul{overflow: hidden;}
+			.other_land li{float: left;width: 33.3%;text-align: center;}
+			.other_land li a{display: block;color: #9c9c9c;font-size: 12px;}
+			.other_land li img{width:50%;padding-bottom: 5%;}
+			.logIn_taob{text-align: center;padding:4% 0 0;}
+			.logIn_taob a{color: #333;font-size: 12px;}
+			.logIn_taob img{width:16%;padding-bottom:5px;
+			animation:name1 2.0s linear 0s infinite alternate;
+            -webkit-animation:name1 2.0s linear 0s infinite alternate;
+			}
+			.logIn_taob em{color: #df151d;}
+			@media only screen and (max-width:350px) {
+		     .logIn_top .text h3{font-size: 2.0rem;}
+		     .logIn_menu a{font-size: 14px;}
+			 }
+			  /*动画*/
+			@keyframes name1{
+				from{transform:rotateY(0deg);-webkit-transform:rotateY(0deg);}
+				to{transform:rotateY(360deg);-webkit-transform:rotateY(360deg);}
+			}
+			@-webkit-keyframes name1{
+				from{transform:rotateY(0deg);-webkit-transform:rotateY(0deg);}
+				to{transform:rotateY(360deg);-webkit-transform:rotateY(360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="shop">
+			<div class="logIn">
+			  <div class="logIn_top">
+			  	<div class="titile">
+			  		<a class="a1" href="javascript:;" onclick="window.history.go(-1)">×</a>
+			  		<a class="a2" href="javascript:;">没有账号？注册</a>
+			  	</div>
+			  	<div class="text"><h3>爱划算<small>aihuasuan.com</small></h3></div>
+			  </div>
+			  <div class="logIn_menu"><a href="javascript:;" class="active">爱划算账号登录</a><a href="javascript:;">淘宝授权登录</a></div>
+			  <div class="logIn_content">
+			  	<div class="account">
+			  		<form>
+			  			<P><input type="text" placeholder="手机号/邮箱/用户名" id="log_phone" oninput="inp()"></P>
+			  			<P><input type="password" placeholder="密码" id="log_pass" oninput="inp()"><i class="i1"><img src="images/icon67.png" id="open_btn"></i></P>
+			  			<P><input type="submit" value="登录" id="log_sum1"></P>
+			  		</form>
+			  		<div class="forgotPassword"><a href="javascript:;">忘记密码</a></div>
+			  		<div class="other_land">
+			  			<h3 class="title">使用其他方式登录</h3>
+			  			<ul>
+			  				<li><a href="javascripr:;"><img src="images/icon57.jpg"><p>QQ</p></a></li>
+			  				<li><a href="javascripr:;"><img src="images/icon55.jpg"><p>微信</p></a></li>
+			  				<li><a href="javascripr:;"><img src="images/icon59.jpg"><p>微博</p></a></li>
+			  			</ul>
+			  		</div>
+			  	</div>
+			  </div>
+			  <div class="logIn_content" style="display: none;">
+			  	<div class="taob">
+			  		<form>
+			  			<P><input type="text" placeholder="淘宝账号" id="log_tb" oninput="int()"><i class="i2"><img src="images/icon44.jpg"></i></P>
+			  			<P><input type="password" placeholder="密码" id="log_tp" oninput="int()"><i class="i2"><img src="images/icon51.jpg"></i></P>
+			  			<P><input type="submit" value="登录" id="log_sum2"></P>
+			  		</form>
+			  	</div>
+			  </div>
+			  <div class="logIn_taob"><a href="javascript:;"><img src="images/icon68.png"><p>使用手机淘宝登入<em>(推荐)</em></p></a></div>
+			</div>
+		</div>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+	      //tab
+			$(".logIn_menu a").click(function(){
+		      $(this).addClass("active").siblings().removeClass("active");
+		      var index = $(".logIn_menu a").index(this);
+		      $(".logIn_content").hide();
+		      $(".logIn_content").eq(index).show();
+		     });
+	    </script>
+	    <script type="text/javascript">
+		 function inp(){
+		 	var t = document.getElementById("log_phone").value.length;
+		 	var p =document.getElementById("log_pass").value.length;
+		 	if(t==0||p==0){
+		 		$("#log_sum1").css("background","#dbdbdb")
+		 	}else{
+		 		$("#log_sum1").css("background","#ff464e")
+		 	}
+		 };
+		 function int(){
+		 	var tb = document.getElementById("log_tb").value.length;
+		 	var tp =document.getElementById("log_tp").value.length;
+		 	if(tb==0||tp==0){
+		 		$("#log_sum2").css("background","#dbdbdb")
+		 	}else{
+		 		$("#log_sum2").css("background","#ff464e")
+		 	}
+		 }
+		</script>
+		<script type="text/javascript">
+			$(function(){
+			  $("#open_btn").toggle(function(){
+			  	$(this).attr("src","images/icon67_1.png");
+			  	$("#log_pass").prop("type","text");
+			  },function(){
+			  	$(this).attr("src","images/icon67.png");
+			  	$("#log_pass").prop("type","password");
+			  })
+			})
+		</script>
+	</body>
+</html>

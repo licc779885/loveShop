@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<!--解决ios下数值变色-->
+		<meta name = "format-detection" content="telephone = no" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link type="text/css" rel="stylesheet" href="css/swiper.min.css" />
+		<title></title>
+		<style type="text/css">
+			#sum_tet,#sum_pass{width: 80%;height: 35px;line-height: 35px;margin:5px auto;}
+			#sum_btn{width: 80%;height: 40px;line-height: 40px;color: #fff;background: #ccc;border-radius: 5px;border: none;font-size: 1.1rem;letter-spacing: 5px;}
+		</style>
+	</head>
+	<body>
+		<div class="shop">
+			<div class="form_input">
+				<p><input type="text" placeholder="请输入查询信息" id="sum_tet" oninput="inp()"></p>
+				<p><input type="password" placeholder="密码" id="sum_pass" oninput="inp()"></p>
+				<p><input type="submit" value="确定" id="sum_btn"></p>
+			</div>
+		</div>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+		 function inp(){
+		 	var t = document.getElementById("sum_tet").value.length;
+		 	var p =document.getElementById("sum_pass").value.length;
+		 	var z = document.getElementById("sum_btn");
+		 	if(t==0||p==0){
+		 		$("#sum_btn").css("background","#ccc")
+		 	}else{
+		 		$("#sum_btn").css("background","red")
+		 	}
+		 }
+		</script>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<!--解决ios下数值变色-->
+		<meta name = "format-detection" content="telephone = no" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link type="text/css" rel="stylesheet" href="css/swiper.min.css" />
+		<title></title>
+	</head>
+	<body style="background:#f0f0f0;">
+		<div class="shop">
+			<div class="hd_title" id="hd_by">
+				<div class="back"></div>
+				<div class="title cef">收藏列表</div>
+				<div class="info"><img src="images/info.png"></div>
+			</div>
+			<div class="souc">
+				<div class="souc_menu"><a href="javascript:;" class="active">商品</a><a href="javascript:;">足迹</a></div>
+				<div class="souc_content">
+					<div class="souc_content_null"><img src="images/img42.jpg"></div>
+				</div>
+				<div class="souc_content" style="display: none;"></div>
+			</div>
+		</div>
+		<!--foot-->
+		<div class="foot">
+			<ul>
+				<li class="active"><a href="javascript:;">
+					<i class="i1"><img src="images/icon1.png"></i>
+					<i class="i2"><img src="images/icon1_1.png"></i>
+					<p>今日折扣</p>
+				</a></li>
+				<li><a href="javascript:;">
+					<i class="i1"><img src="images/icon2.png"></i>
+					<i class="i2"><img src="images/icon2_1.png"></i>
+					<p>优惠券</p>
+				</a></li>
+				<li><a href="javascript:;">
+					<i class="i1"><img src="images/icon3.png"></i>
+					<i class="i2"><img src="images/icon3_1.png"></i>
+					<p>分享赚</p>
+				</a></li>
+				<li><a href="javascript:;">
+					<i class="i1"><img src="images/icon4.png"></i>
+					<i class="i2"><img src="images/icon4_1.png"></i>
+					<p>买家秀</p>
+				</a></li>
+				<li><a href="javascript:;">
+					<i class="i1"><img src="images/icon5.png"></i>
+					<i class="i2"><img src="images/icon5_1.png"></i>
+					<p>个人中心</p>
+				</a></li>
+			</ul>
+		</div>
+		<!--返回顶部-->
+		<div id="back_top"><img src="images/top.png"></div>
+		<!--返回顶部结束-->
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/style.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/jquery.sidr.min.js"></script>
+		<script src="js/slick.min.js"></script>
+        <script src="js/qinzhiyong.js"></script>
+	    <script>
+	     var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        slidesPerView:1.5,
+	        paginationClickable: true,
+	        spaceBetween:10,
+	        freeMode: true
+	      });
+	    </script>
+	    <script type="text/javascript">
+	    	//tab
+			$(".souc_menu a").click(function(){
+		      $(this).addClass("active").siblings().removeClass("active");
+		      var index = $(".souc_menu a").index(this);
+		      $(".souc_content").hide();
+		      $(".souc_content").eq(index).show();
+		     });
+	    </script>
+	    
+	</body>
+</html>

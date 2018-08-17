@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<!--解决ios下数值变色-->
+		<meta name = "format-detection" content="telephone = no" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<title></title>
+		<style type="text/css">
+		    input::-webkit-input-placeholder {color: #c0c0c0 !important;}
+			input[type='text']:focus,input[type='password']:focus{box-shadow:none;}
+			.shop{padding-bottom: 0;}
+			.logIn_top{padding:0 3%;
+			 background: -webkit-linear-gradient(left,#fe474c,#fe5d26); 
+			 background: -o-linear-gradient(right,#fe474c,#fe5d26); 
+			 background: -moz-linear-gradient(right, #fe474c,#fe5d26); 
+			 background: linear-gradient(to right,#fe474c,#fe5d26); 
+			}
+			.logIn_top .titile{height:45px;line-height:45px;color: #fff;overflow: hidden;}
+			.logIn_top .titile a{color: #fff;}
+			.logIn_top .titile a.a1{float: left;font-size:1.6rem;}
+			.logIn_top .titile a.a1 img{width:25px;}
+			.logIn_top .titile a.a2{float: right;}
+			.logIn_top .text{text-align: center;padding:6% 0;}
+			.logIn_top .text h3{font-size:2.5rem;color: #fff;line-height:90%;font-weight: bold;}
+			.logIn_top .text small{display: block;font-size: 1.0rem;font-weight: normal;}
+			.logIn_menu{padding: 0 3%;}
+			.logIn_menu a{display: inline-block;width: 50%;font-size:1.0rem;color: #959595;text-align: center;padding: 3% 0;}
+			.logIn_menu a.active{color: #e84365;border-bottom:2px solid #e84365;}
+			.logIn_content{padding:0 3%;}
+			.logIn_content p{position: relative;}
+			.logIn_content p i.i1 img{position: absolute;top: 50%;right:2px;width:25px;margin-top:-6px;}
+			.logIn_content p i.i2 img{position: absolute;top: 50%;left:2px;width:25px;margin-top:-12px;}
+			.logIn_content input[type=text],.logIn_content input[type=password]{padding:4% 0;border: none;border-bottom: 1px solid #e4e4e4;color: #c0c0c0}
+			.logIn_content input[type=submit]{height:47px;line-height:47px;background: #dbdbdb;color: #fff;width: 100%;border: none;font-size: 1.1rem;letter-spacing:5px;margin-top:7%;border-radius: 3px;}
+			.logIn_content .taob input[type=text],.logIn_content .taob input[type=password]{padding-left:40px;}
+			.forgotPassword{padding:2% 0 5%;}
+			.forgotPassword a{text-align: right;color: #9f9f9f;display: block;}
+			.other_land h3{text-align: center;color: #9c9c9c;padding-bottom: 6%;}
+			.other_land ul{overflow: hidden;}
+			.other_land li{float: left;width: 33.3%;text-align: center;}
+			.other_land li a{display: block;color: #9c9c9c;font-size: 12px;}
+			.other_land li img{width:50%;padding-bottom: 5%;}
+			.logIn_taob{text-align: center;padding:4% 0 0;}
+			.logIn_taob a{color: #333;font-size: 12px;}
+			.logIn_taob img{width:16%;padding-bottom:5px;
+			 animation:name1 2.0s linear 0s infinite alternate;
+            -webkit-animation:name1 2.0s linear 0s infinite alternate;
+			}
+			.logIn_taob em{color: #df151d;}
+			.logIn_zc{color: #9c9c9c;text-align: center;font-size: 12px;}
+			.logIn_zc .title{font-size:15px;color: #e83c52;padding: 3% 0;}
+			.register form{margin-bottom: 5%;}
+			.register a.a1{display: block;padding: 0 2%;height: 36px;line-height: 36px;text-align: right;color: #9C9C9C;position: absolute;right: 0;top: 50%;margin-top: -18px;font-size: 13px;}
+			@media only screen and (max-width:350px) {
+		     .logIn_top .text h3{font-size: 2.0rem;}
+		     .logIn_menu a{font-size: 14px;}
+			 }
+			 /*动画*/
+			@keyframes name1{
+				from{transform:rotateY(0deg);-webkit-transform:rotateY(0deg);}
+				to{transform:rotateY(360deg);-webkit-transform:rotateY(360deg);}
+			}
+			@-webkit-keyframes name1{
+				from{transform:rotateY(0deg);-webkit-transform:rotateY(0deg);}
+				to{transform:rotateY(360deg);-webkit-transform:rotateY(360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="shop">
+			<div class="logIn">
+			  <div class="logIn_top">
+			  	<div class="titile">
+			  		<a class="a1" href="javascript:;" onclick="window.history.go(-1)"><img src="images/icon69.png"></a>
+			  	</div>
+			  	<div class="text"><h3>爱划算<small>aihuasuan.com</small></h3></div>
+			  </div>
+			  <div class="logIn_zc">
+			  	<h3 class="title">注册</h3>
+			  	<P>请确保你的手机畅通，用于接收验证码短信</P>
+			  </div>
+			  <div class="logIn_content">
+			  	<div class="register">
+			  		<form>
+			  			<P><input type="text" placeholder="请输入手机号码" id="zc_phone" oninput="inz()"></P>
+			  			<P><input type="text" placeholder="请输入验证码" id="zc_pass" oninput="inz()"><a href="javascript:;" class="a1">获取验证码</a></P>
+			  			<P><input type="submit" value="下一步" id="zc_sum"></P>
+			  		</form>
+			  		<div class="other_land">
+			  			<h3 class="title">使用其他方式登录</h3>
+			  			<ul>
+			  				<li><a href="javascripr:;"><img src="images/icon57.jpg"><p>QQ</p></a></li>
+			  				<li><a href="javascripr:;"><img src="images/icon55.jpg"><p>微信</p></a></li>
+			  				<li><a href="javascripr:;"><img src="images/icon59.jpg"><p>微博</p></a></li>
+			  			</ul>
+			  		</div>
+			  	</div>
+			  </div>
+			  <div class="logIn_taob"><a href="javascript:;"><img src="images/icon68.png"><p>使用手机淘宝登入<em>(推荐)</em></p></a></div>
+			</div>
+		</div>
+		<script src="js/jquery-1.8.3.min.js"></script>
+	    <script type="text/javascript">
+		 function inz(){
+		 	var t = document.getElementById("zc_phone").value.length;
+		 	var p =document.getElementById("zc_pass").value.length;
+		 	if(t==0||p==0){
+		 		$("#zc_sum").css("background","#dbdbdb")
+		 	}else{
+		 		$("#zc_sum").css("background","#ff464e")
+		 	}
+		 }
+		</script>
+	</body>
+</html>

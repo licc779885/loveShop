@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<!--解决ios下数值变色-->
+		<meta name = "format-detection" content="telephone = no" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link type="text/css" rel="stylesheet" href="css/swiper.min.css" />
+		<title></title>
+	</head>
+	<body style="background: #F5F2F2;">
+		<div class="shop">
+			<div class="hd_title" id="hd_by">
+				<div class="back"></div>
+				<div class="title cef">设置</div>
+				<div class="info"><img src="images/info.png"></div>
+			</div>
+			<div class="user">
+			  <ul>
+			    <li><a href="#">签到提醒<i><div class="change"><div><input type="checkbox"><em></em><label></label></div></div></a></li>
+			    <li><a href="#">信息推送<i></a><div class="change"><div><input type="checkbox"><em></em><label></label></div></div></li>
+			    <li class="lt"><a href="#">意见反馈<i></a></li>
+			    <li class="lt"><a href="#">清楚缓存<i></a></li>
+			    <li class="lt"><a href="#">淘宝登录授权<i></a></li>
+			    <li class="lt"><a href="#">一键加QQ群：12345678<i></a></li>	
+			  </ul>
+			  <ul>
+			    <li class="lt"><a href="#"><i class="icon">版本检测<span class="spn">当前版本4.6</span></a></li>
+			  </ul>
+			</div>
+			<input type="submit" value="退出" id="sum">
+		</div>
+		<!--foot-->
+		<div class="foot">
+			<ul>
+				<li class="active"><a href="javascript:;">
+					<i class="i1"><img src="images/icon1.png"></i>
+					<i class="i2"><img src="images/icon1_1.png"></i>
+					<p>今日折扣</p>
+				</a></li>
+				<li><a href="javascript:;">
+					<i class="i1"><img src="images/icon2.png"></i>
+					<i class="i2"><img src="images/icon2_1.png"></i>
+					<p>优惠券</p>
+				</a></li>
+				<li><a href="javascript:;">
+					<i class="i1"><img src="images/icon3.png"></i>
+					<i class="i2"><img src="images/icon3_1.png"></i>
+					<p>分享赚</p>
+				</a></li>
+				<li><a href="javascript:;">
+					<i class="i1"><img src="images/icon4.png"></i>
+					<i class="i2"><img src="images/icon4_1.png"></i>
+					<p>买家秀</p>
+				</a></li>
+				<li><a href="javascript:;">
+					<i class="i1"><img src="images/icon5.png"></i>
+					<i class="i2"><img src="images/icon5_1.png"></i>
+					<p>个人中心</p>
+				</a></li>
+			</ul>
+		</div>
+		<!--返回顶部-->
+		<div id="back_top"><img src="images/top.png"></div>
+		<!--返回顶部结束-->
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/style.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/jquery.sidr.min.js"></script>
+		<script src="js/slick.min.js"></script>
+        <script src="js/qinzhiyong.js"></script>
+	    <script>
+	     var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        slidesPerView:1.5,
+	        paginationClickable: true,
+	        spaceBetween:10,
+	        freeMode: true
+	      });
+	    </script>
+	</body>
+</html>
